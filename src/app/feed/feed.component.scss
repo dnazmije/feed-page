@@ -1,0 +1,13 @@
+.feed {
+    display: flex;
+    flex-direction: row;
+
+    &-sidebar {
+        width: 30%;
+    }
+
+    &-content {
+        width: 70%;
+
+    }
+}

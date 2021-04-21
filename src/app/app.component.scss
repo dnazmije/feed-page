@@ -1,0 +1,45 @@
+// general styles for the app go in this file
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@300&display=swap');
+
+// colors
+
+$base-color: #006b70;
+$light-color: #8ac9cc;
+$dark-color: #004a4e;
+$bg-color: lighten($light-color, 25%);
+
+// typography
+
+$font-regular: 14px;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather;
+}
+
+div, p, ul, li, section, button {
+    font-family: Lato;
+    font-size: $font-regular;
+}
+
+// buttons
+
+.button {
+    min-width: 80px;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+
+    &-basic {
+        background-color: $base-color;
+        color: white;
+    }
+
+    &-dark {
+        background-color: $dark-color;
+        color: white;
+        text-transform: uppercase
+    }
+}
+

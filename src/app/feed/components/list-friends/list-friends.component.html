@@ -1,0 +1,11 @@
+<div class="friends">
+    <button class="button button-dark" (click)="getFeeds()">All</button>
+    <div class="friends-content">
+        <div *ngFor="let friend of (friends | async);">
+            <div (click)="getFeedByFrindsId(friend.id)" class="friends-list">
+                {{friend.name}}
+            </div>
+        </div>
+    </div>
+</div>
+

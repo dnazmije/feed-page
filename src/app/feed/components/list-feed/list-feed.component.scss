@@ -1,0 +1,56 @@
+@import '../../../../app/app.component.scss';
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: $bg-color;
+    margin: 24px;
+    border-radius: 8px;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    &-orange {
+        border-top: 5px solid orange;
+    }
+
+    &-green {
+        border-top: 5px solid green;
+    }
+
+    &-blue {
+        border-top: 5px solid blue;
+    }
+
+    &-dark {
+        background-color: $dark-color;
+        color: white;
+    }
+
+    img {
+        min-width: 150px;
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+        align-content: center;
+
+        @media screen and (max-width: 600px) {
+            min-width: 100px;
+            width: 100px;
+            align-content: center;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.card:hover {
+    .hidden{
+        display: block;
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "friends": [
+        {
+            "name": "Ana Marija Fin", 
+            "id": 1
+        },
+        {
+            "name": "Filip Gordon", 
+            "id": 2
+        },
+        {
+            "name": "Dani Dona", 
+            "id": 3
+        }
+    ],
+    "list-feed": [
+        {
+            "id": 1,
+            "friends-id": 1,
+            "name": "Ana Marija Fin",
+            "newsfeed": [
+                {
+                    "id": 1,
+                    "type": "ADDED-FRIEND",
+                    "date": "2021-01-05",
+                    "friend-name": "Melisa Belinda"
+                },
+                {
+                    "id": 2,
+                    "type": "UPLOADED-PHOTO",
+                    "date": "2021-03-15",
+                    "img-src": "https://cdn.pixabay.com/photo/2014/05/02/21/50/laptop-336378_1280.jpg"
+                },
+                {
+                    "id": 3,
+                    "type": "LIKED",
+                    "date": "2021-04-13",
+                    "description": "Ana Marija Fin liked the photo of Eva Zeva"
+                }
+            ]
+        }, 
+        {
+            "id": 2,
+            "friends-id": 2,
+            "name": "Filip Gordon", 
+            "newsfeed": [
+                {
+                    "id": 1,
+                    "type": "UPLOADED-PHOTO",
+                    "date": "2021-03-15",
+                    "img-src": "https://cdn.pixabay.com/photo/2014/05/02/21/49/laptop-336373_1280.jpg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "friends-id": 3,
+            "name": "Dani Dona", 
+            "newsfeed": [
+                {
+                    "id": 1,
+                    "type": "ADDED-FRIEND",
+                    "date": "2021-04-12",
+                    "friend-name": "David Ben"
+                }
+            ]
+        }
+       
+    ]
+}

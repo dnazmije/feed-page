@@ -1,0 +1,48 @@
+<div class="feed" *ngIf="(feedToDisplay | async) else noData">
+    <div *ngFor="let feed of (feedToDisplay | async);">
+
+        <div *ngFor="let newsfeed of (feed.newsfeed);">
+            <div [ngSwitch]="newsfeed.type">
+                <ng-container *ngSwitchCase="'ADDED-FRIEND'">
+                    <div class="card card-green">
+                        <div>
+                            <p>{{feed.name}} become friends with
+                                {{newsfeed['friend-name']}}.</p>
+                        </div>
+                        <div class="hidden">
+                            <p>{{newsfeed.date}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngSwitchCase="'UPLOADED-PHOTO'">
+                    <div class="card card-blue">
+                        <div>
+                            <p>{{feed.name}} uploaded a photo.</p>
+                            <img src="{{newsfeed['img-src']}}" />
+                        </div>
+                        <div class="hidden">
+                            <p>{{newsfeed.date}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngSwitchCase="'LIKED'">
+                    <div class="card card-orange">
+                        <div>
+                            <p>{{newsfeed.description}}</p>
+                        </div>
+                        <div class="hidden">
+                            <p>{{newsfeed.date}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<ng-template class="feed" #noData>
+    <div class="card">
+        <p>Click on friends name to show newsfeed.</p>
+    </div>
+</ng-template>
